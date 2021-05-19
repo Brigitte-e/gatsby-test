@@ -23,25 +23,7 @@ return graphql(`
                     }
                 }
             }
-        },
-        allDatoCmsContentItem {
-            edges {
-              node {
-                id
-                linksField {
-                  id
-                  option
-                  optionKey
-                }
-                lastName
-                certification
-                firstName
-                locale
-                name
-                year
-              }
-            }
-          }
+        }
     }`).then(res => {
         res.data.allAirtable.edges.forEach(({ node }) => {
             createPage({
